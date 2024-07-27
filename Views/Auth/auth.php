@@ -14,7 +14,7 @@
     />
     <!-- Bootstrap icons-->
     <link
-      href="icons/bootstrap-icons-1.11.3/font/bootstrap-icons.css"
+      href="assets/icons/bootstrap-icons-1.11.3/font/bootstrap-icons.css"
       rel="stylesheet"
     />
     <!-- Core theme CSS (includes Bootstrap)-->
@@ -29,7 +29,7 @@
   <div class="container-fluid h-custom ">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-9 col-lg-6 col-xl-5">
-        <img src="img/pcr2.png"
+        <img src="assets/img/pcr2.png"
           class="img-fluid" alt="Sample image">
       </div>
       <div class="col-md-3 col-lg-6 col-xl-4 offset-xl-1">

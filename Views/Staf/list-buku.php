@@ -81,9 +81,8 @@
                                         ?>"><?= $row['buku_status'] ?></span>
                                     </td>
                                     <td class="text-center">
-                                    <div class="" id="buku_dokumen_tabel" hidden><?= $row['buku_dokumen']?></div>
+                                        <div class="" id="buku_dokumen_tabel" hidden><?= $row['buku_dokumen']?></div>
                                         <a target="_blank" href="index.php?page=listBuku&act=preview&id=<?= $row['buku_id']?>&docs=<?= $row['buku_dokumen']?>" class="table-link">
-
                                             <span class="preview-dokumen badge text-wrap bg-dark"><i
                                                     class="me-1 bi bi-eye-fill"></i>Preview</span>
                                         </a>
@@ -219,7 +218,7 @@
                             <input type="text" name="buku_id" class="buku_id" value="" hidden>
                                 <label for="prev-dokumen">Dokumen Buku Lama  : </label>
                                 <input type="text" id="old-dokumen" class="form-control fw-bold fst-italic" value="" name="old-dokumen" required/>
-                                <a id="" target="_blank" href="#" class="" id="prev-dokumen">
+                                <a target="_blank" href="" class="" id="prev-dokumen">
                                 <span class="preview-dokumen badge text-wrap bg-primary"><i
                                         class="me-1 bi bi-eye-fill"></i>Preview</span>
                                 </a>

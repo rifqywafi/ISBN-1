@@ -21,7 +21,7 @@ $paginated = array_slice($dataBukuSelesai, $pagination['offset'], $pagination['l
         </div>
     </div>
     <?php if($dataBukuSelesai){?>
-    <div class="row container">
+    <div class="row container mb-5">
         <?php foreach($paginated as $data){
         ?>    
         <div class="col-sm-12 col-md-6 col-xl-4">
@@ -38,7 +38,7 @@ $paginated = array_slice($dataBukuSelesai, $pagination['offset'], $pagination['l
                     </p>
                 </div>
                 <div>
-                    <a class="btn btn-success" href="database/isbn/'.<?=$data['buku_isbn']?>.'" class="table-link" download><i class="bi bi-download me-2"></i>Download ISBN</a>
+                    <a class="btn btn-success" href="database/isbn/<?=$data['buku_isbn']?>"  class="table-link" download><i class="bi bi-download me-2"></i>Download ISBN</a>
                     <a class="btn btn-primary" target="_blank" href="index.php?page=buku&act=preview&id=<?= $data['buku_id']?>&docs=<?= $data['buku_dokumen']?>" class="table-link"><i class="bi bi-eye-fill me-2"></i>Preview</a>
                 </div>
             </div>
@@ -52,15 +52,15 @@ $paginated = array_slice($dataBukuSelesai, $pagination['offset'], $pagination['l
                     if($pagination['currentPage'] > 1)
                         echo '<a class="page-link" href="'.$_SERVER['REQUEST_URI'].'&p=1">First</a>';
                     else
-                        echo '<span class="page-link">First</span>';
+                        echo '<a class="page-link">First</a>';
                 ?>
             </li>
             <li class="page-item">
                 <?php
                     if(($pagination['currentPage'] - 1) > 0)
-                        echo '<a class="page-link" href="'.$_SERVER['REQUEST_URI'].'&p='.($pagination['currentPage'] - 1).'">Previous</a>';
+                        echo '<a class="page-link nav-link" href="'.$_SERVER['REQUEST_URI'].'&p='.($pagination['currentPage'] - 1).'">Previous</a>';
                     else
-                        echo '<span class="page-link">Previous</span>';
+                        echo '<a class="page-link nav-link">Previous</a>';
                 ?>
             </li>
             <?php
@@ -69,9 +69,9 @@ $paginated = array_slice($dataBukuSelesai, $pagination['offset'], $pagination['l
             <li class="page-item" <?php echo $i == $pagination['currentPage'] ? ' class="active"' : '' ?>>
                 <?php
                     if($i != $pagination['currentPage'])
-                        echo '<a class="page-link" href="'.$_SERVER['REQUEST_URI'].'&p='.$i.'">'.$i.'</a>';
+                        echo '<a class="page-link nav-link" href="'.$_SERVER['REQUEST_URI'].'&p='.$i.'">'.$i.'</a>';
                     else
-                        echo '<span class="page-link">'.$i.'</span>';
+                        echo '<a class="page-link nav-link">'.$i.'</a>';
                 ?>
             </li>
             <?php
@@ -80,17 +80,17 @@ $paginated = array_slice($dataBukuSelesai, $pagination['offset'], $pagination['l
             <li>
                 <?php
                     if(($pagination['currentPage'] + 1) <= $pagination['nbPages'])
-                        echo '<a class="page-link" href="'.$_SERVER['REQUEST_URI'].'&p='.($pagination['currentPage'] + 1).'">Next</a>';
+                        echo '<a class="page-link nav-link" href="'.$_SERVER['REQUEST_URI'].'&p='.($pagination['currentPage'] + 1).'">Next</a>';
                     else
-                        echo '<span class="page-link">Next</span>';
+                        echo '<a class="page-link nav-link">Next</a>';
                 ?>
             </li>
             <li>
                 <?php
                     if($pagination['currentPage'] < $pagination['nbPages'])
-                        echo '<a class="page-link" href="'.$_SERVER['REQUEST_URI'].'&p='.$pagination['nbPages'].'">Last</a>';
+                        echo '<a class="page-link nav-link" href="'.$_SERVER['REQUEST_URI'].'&p='.$pagination['nbPages'].'">Last</a>';
                     else
-                        echo '<span class="page-link">Last</span>';
+                        echo '<a class="page-link nav-link">Last</a>';
                 ?>
             </li>
         </ul>

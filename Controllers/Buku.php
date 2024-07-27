@@ -107,7 +107,10 @@ class Buku
     function hapus()
     {
         $id = $_GET['buku_id'];
-        $this->db->hapusData($id);
+        $dokumen = $this->db->getById($id)[0]['buku_dokumen'];
+        if(unlink("database/document/".$dokumen)){
+            $this->db->hapusData($id);
+        }
     }
 
     function previewBuku($data)
