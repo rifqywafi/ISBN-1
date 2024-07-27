@@ -1,0 +1,7 @@
+{
+    "require": {
+        "google/apiclient": "2.12.1",
+        "phpmailer/phpmailer": "^6.9",
+        "mpdf/mpdf": "^6.1"
+    }
+}
