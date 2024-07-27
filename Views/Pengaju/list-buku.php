@@ -67,9 +67,13 @@
                                         ?>
                                     </td>
                                     <td class="text-center">
-                                        <span class="status-buku badge text-wrap <?php
-                                        if ($row['buku_status'] == 'Menunggu Diproses' || $row['buku_status'] == 'Sedang Diproses' || $row['buku_status'] == 'Sedang Diajukan') {
-                                            echo 'bg-warning';
+                                        <span class="status-buku badge <?php
+                                        if ($row['buku_status'] == 'Menunggu Diproses'){
+                                            echo 'bg-warning text-dark';
+                                        } else if($row['buku_status'] == 'Sedang Diproses'){
+                                            echo 'bg-info text-dark';
+                                        } else if($row['buku_status'] == 'Sedang Diajukan') {
+                                            echo 'bg-primary';
                                         } else if ($row['buku_status'] == 'Selesai') {
                                             echo 'bg-success';
                                         } else if ($row['buku_status'] == 'Ditolak') {

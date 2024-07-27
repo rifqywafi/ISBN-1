@@ -66,11 +66,11 @@
                                         ?>
                                     </td>
                                     <td class="text-center">
-                                        <span class="status-buku badge text-wrap <?php
+                                        <span class="status-buku badge <?php
                                         if ($row['buku_status'] == 'Menunggu Diproses'){
-                                            echo 'bg-warning';
+                                            echo 'bg-warning text-dark';
                                         } else if($row['buku_status'] == 'Sedang Diproses'){
-                                            echo 'bg-info';
+                                            echo 'bg-info text-dark';
                                         } else if($row['buku_status'] == 'Sedang Diajukan') {
                                             echo 'bg-primary';
                                         } else if ($row['buku_status'] == 'Selesai') {
