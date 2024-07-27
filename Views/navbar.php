@@ -3,7 +3,7 @@
   <nav class="navbar border-2 border-bottom sticky-top navbar-expand-lg navbar-light bg-white py-3">
     <div class="container px-5">
       <a class="navbar-brand" href="index.php"><span class="fw-bolder text-primary">
-          <img src="img/pcr2.png" width="400" height="50" alt="Politeknik Caltex Riau" srcset="" /></span></a>
+          <img src="assets/img/pcr2.png" width="400" height="50" alt="Politeknik Caltex Riau" srcset="" /></span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
